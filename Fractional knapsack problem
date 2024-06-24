@@ -31,7 +31,7 @@ static bool cmp(struct Item a, struct Item b)
 double fractionalKnapsack(int W, struct Item arr[], int N)
 {
 
-    // Sorting Item on basis of ratio
+    
 
     sort(arr, arr + N, cmp);
  
@@ -39,15 +39,12 @@ double fractionalKnapsack(int W, struct Item arr[], int N)
     double finalvalue = 0.0;
  
 
-    // Looping through all items
 
     for (int i = 0; i < N; i++) {
 
          
 
-        // If adding Item won't overflow, 
-
-        // add it completely
+        
 
         if (arr[i].weight <= W) {
 
@@ -58,9 +55,7 @@ double fractionalKnapsack(int W, struct Item arr[], int N)
         }
  
 
-        // If we can't add current Item, 
-
-        // add fractional part of it
+       
 
         else {
 
@@ -77,12 +72,12 @@ double fractionalKnapsack(int W, struct Item arr[], int N)
     }
  
 
-    // Returning final value
+    
 
     return finalvalue;
 }
  
-// Driver code
+
 
 int main()
 {
