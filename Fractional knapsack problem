@@ -1,18 +1,13 @@
-// C++ program to solve fractional Knapsack Problem
- 
-#include <bits/stdc++.h>
 
-using namespace std;
  
-// Structure for an item which stores weight and
-// corresponding value of Item
+#include 
 
 struct Item {
 
     int profit, weight;
  
 
-    // Constructor
+    
 
     Item(int profit, int weight)
 
@@ -20,13 +15,7 @@ struct Item {
 
         this->profit = profit;
 
-        this->weight = weight;
-
-    }
-};
- 
-// Comparison function to sort Item 
-// according to profit/weight ratio
+        this->weight = 
 
 static bool cmp(struct Item a, struct Item b)
 {
@@ -38,7 +27,6 @@ static bool cmp(struct Item a, struct Item b)
     return r1 > r2;
 }
  
-// Main greedy function to solve problem
 
 double fractionalKnapsack(int W, struct Item arr[], int N)
 {
